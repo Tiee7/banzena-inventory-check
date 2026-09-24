@@ -270,22 +270,14 @@ def check_inventory(base: str, fetch=fetch_url, now=_now_iso, sleep=time.sleep, 
     request_count = 0
 
     def fetch_polite(url):
-        """Space requests and make one retry for transient source failures."""
+        """Space one anonymous request per URL without retrying the target."""
         nonlocal request_count
-        retries = 0
-        while True:
-            # Pace every request, including a retry, to avoid hammering the site.
-            if request_count:
-                sleep(delay)
-            request_count += 1
-            try:
-                return fetch(url)
-            except SourceFailure:
-                # A single retry handles intermittent transport drops without
-                # creating an unbounded loop or hiding persistent failures.
-                if retries >= 1:
-                    raise
-                retries += 1
+        # Keep the agreed request spacing, and never issue a second request
+        # after a transport failure: each advertised URL is checked once.
+        if request_count:
+            sleep(delay)
+        request_count += 1
+        return fetch(url)
 
     try:
         base = _base_url(base)

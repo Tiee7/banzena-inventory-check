@@ -67,7 +67,7 @@ class HostInspectionTests(unittest.TestCase):
             status=200,
             content_type="text/html; charset=utf-8",
             body=b"<html><title>shop</title></html>",
-            fetched_at="2026-09-24T00:17:30Z",
+            fetched_at="2026-09-24T01:58:03Z",
             expected="advertised",
         )
         self.assertEqual("pass", evidence["status"])
@@ -81,7 +81,7 @@ class HostInspectionTests(unittest.TestCase):
             status=404,
             content_type="application/json",
             body=b'{"error":"store not found"}',
-            fetched_at="2026-09-24T00:17:30Z",
+            fetched_at="2026-09-24T01:58:03Z",
             expected="unknown",
         )
         self.assertEqual("pass", evidence["status"])
@@ -94,7 +94,7 @@ class HostInspectionTests(unittest.TestCase):
                 status=404,
                 content_type="application/json",
                 body=b'{"error":"store not found"}',
-                fetched_at="2026-09-24T00:17:30Z",
+                fetched_at="2026-09-24T01:58:03Z",
                 expected="advertised",
             )
 
@@ -142,7 +142,7 @@ class InventoryCheckTests(unittest.TestCase):
         report = check_inventory(
             base="https://www.banzena.com",
             fetch=fetch,
-            now=lambda: "2026-09-24T00:17:30Z",
+            now=lambda: "2026-09-24T01:58:03Z",
             sleep=delay_calls.append,
         )
 
@@ -196,28 +196,22 @@ class InventoryCheckTests(unittest.TestCase):
         )
         json.dumps(report)
 
-    def test_transient_get_failure_retries_once_and_observes_request_pacing(self):
+    def test_transient_get_failure_is_not_retried(self):
         fetch_calls = []
-        delay_calls = []
 
         def fetch(url):
             fetch_calls.append(url)
-            if url == "https://www.banzena.com" and fetch_calls.count(url) == 1:
-                raise SourceFailure("temporary TLS EOF")
-            if "not-a-shop-xyz" in url:
-                return 404, "application/json", b'{"error":"store not found"}'
-            return 200, "text/html", b"<html>ok</html>"
+            raise SourceFailure("temporary TLS EOF")
 
         report = check_inventory(
             base="https://www.banzena.com",
             fetch=fetch,
-            now=lambda: "2026-09-24T00:00:00Z",
-            sleep=delay_calls.append,
+            now=lambda: "2026-09-24T01:58:03Z",
         )
 
-        self.assertEqual("pass", report["status"])
-        self.assertEqual(2, fetch_calls.count("https://www.banzena.com"))
-        self.assertEqual(len(fetch_calls) - 1, len(delay_calls))
+        self.assertEqual("error", report["status"])
+        self.assertEqual(2, report["exit_code"])
+        self.assertEqual(["https://www.banzena.com"], fetch_calls)
 
     def test_fetch_failure_is_exit_code_two(self):
         def fetch(url):
@@ -226,7 +220,7 @@ class InventoryCheckTests(unittest.TestCase):
         report = check_inventory(
             base="https://www.banzena.com",
             fetch=fetch,
-            now=lambda: "2026-09-24T00:17:30Z",
+            now=lambda: "2026-09-24T01:58:03Z",
             sleep=lambda _: None,
         )
         self.assertEqual("error", report["status"])
@@ -248,7 +242,7 @@ class InventoryCheckTests(unittest.TestCase):
                     "status_code": 404,
                     "content_type": "application/json",
                     "first_bytes": '{"error":"not found"}',
-                    "fetched_at": "2026-09-24T00:17:30Z",
+                    "fetched_at": "2026-09-24T01:58:03Z",
                     "error": "path did not meet the HTML 200 contract",
                 }
             ],
