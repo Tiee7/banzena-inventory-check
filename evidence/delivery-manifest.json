@@ -1,0 +1,22 @@
+{
+  "command": "PYTHONPATH=src python3.11 -m banzena_inventory_check --base https://www.banzena.com --json",
+  "implementation_commit_on_github": "66bb9f4f8a3b295d1835771730eaa7ff1aaa759c",
+  "run_started_at_utc": "2026-09-24T02:09:21Z",
+  "run_started_at_beijing": "2026-09-24T10:09:21+08:00",
+  "run_finished_at_utc": "2026-09-24T02:10:05Z",
+  "run_finished_at_beijing": "2026-09-24T10:10:05+08:00",
+  "exit_code": 0,
+  "report_file": "public-run-20260924.json",
+  "report_sha256": "fe108e64c5c54baf0f8745ec55ec0789d26f687d22fe25cc16f0397f84490c7f",
+  "report_status": "pass",
+  "source_page_count": 4,
+  "advertised_shop_host_count": 8,
+  "host_evidence_record_count": 9,
+  "known_good_control_count": 1,
+  "unknown_negative_control_count": 1,
+  "advertised_path_count": 5,
+  "target_evidence_record_count": 14,
+  "errors": [],
+  "first_target_fetch_utc": "2026-09-24T02:09:35Z",
+  "last_target_fetch_utc": "2026-09-24T02:10:05Z"
+}

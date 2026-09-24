@@ -1,0 +1,88 @@
+Banzena package verification evidence
+Runtime: Python 3.11
+All timestamps below are UTC; corresponding Beijing time is UTC+8.
+
+[Syntax compilation]
+Start UTC: 2026-09-24T02:10:41Z
+Start Beijing: 2026-09-24T10:10:41+08:00
+End UTC: 2026-09-24T02:10:41Z
+End Beijing: 2026-09-24T10:10:41+08:00
+Command: python3.11 -m compileall -q src tests
+Exit code: 0
+Output:
+(none)
+
+[Offline unit tests]
+Start UTC: 2026-09-24T02:10:41Z
+Start Beijing: 2026-09-24T10:10:41+08:00
+End UTC: 2026-09-24T02:10:41Z
+End Beijing: 2026-09-24T10:10:41+08:00
+Command: PYTHONPATH=src python3.11 -m unittest discover -s tests -v
+Exit code: 0
+Output:
+(none)
+Stderr:
+test_advertised_404_is_contract_failure (test_checker.HostInspectionTests.test_advertised_404_is_contract_failure) ... ok
+test_advertised_host_requires_html_and_non_error_body (test_checker.HostInspectionTests.test_advertised_host_requires_html_and_non_error_body) ... ok
+test_unknown_control_requires_json_404 (test_checker.HostInspectionTests.test_unknown_control_requires_json_404) ... ok
+test_check_inventory_returns_ci_report_without_network_in_test (test_checker.InventoryCheckTests.test_check_inventory_returns_ci_report_without_network_in_test) ... ok
+test_default_cli_prints_failure_evidence_for_advertised_paths (test_checker.InventoryCheckTests.test_default_cli_prints_failure_evidence_for_advertised_paths) ... ok
+test_fetch_failure_is_exit_code_two (test_checker.InventoryCheckTests.test_fetch_failure_is_exit_code_two) ... ok
+test_transient_get_failure_is_not_retried (test_checker.InventoryCheckTests.test_transient_get_failure_is_not_retried) ... ok
+test_duplicate_advertisements_are_deduplicated (test_checker.InventoryExtractionTests.test_duplicate_advertisements_are_deduplicated) ... ok
+test_reads_advertised_hosts_only_from_address_bar_i_elements (test_checker.InventoryExtractionTests.test_reads_advertised_hosts_only_from_address_bar_i_elements) ... ok
+test_reads_advertised_site_paths_in_the_same_components (test_checker.InventoryExtractionTests.test_reads_advertised_site_paths_in_the_same_components) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+OK
+
+[Build wheel]
+Start UTC: 2026-09-24T02:10:41Z
+Start Beijing: 2026-09-24T10:10:41+08:00
+End UTC: 2026-09-24T02:10:41Z
+End Beijing: 2026-09-24T10:10:41+08:00
+Command: python3.11 -m pip wheel --no-build-isolation --no-deps --wheel-dir /private/tmp/banzena-checker-wheel-final .
+Exit code: 0
+Output:
+Processing /private/tmp/banzena-inventory-check-remote-clone
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: banzena-inventory-check
+  Building wheel for banzena-inventory-check (pyproject.toml): started
+  Building wheel for banzena-inventory-check (pyproject.toml): finished with status 'done'
+  Created wheel for banzena-inventory-check: filename=banzena_inventory_check-0.1.0-py3-none-any.whl size=9081 sha256=3ca63b3b141356e88c17971486dc7a5541cb255eec079dfe88bdefad68c7f1c7
+  Stored in directory: /private/tmp/banzena-pip-cache/wheels/5a/d5/02/708f8db97cb8f099aef6a48f53b19500247c0534859aed5b5b
+Successfully built banzena-inventory-check
+
+[Install built wheel without network]
+Start UTC: 2026-09-24T02:10:44Z
+Start Beijing: 2026-09-24T10:10:44+08:00
+End UTC: 2026-09-24T02:10:44Z
+End Beijing: 2026-09-24T10:10:44+08:00
+Command: /private/tmp/banzena-checker-verify-venv-final/bin/python -m pip install --no-index --no-deps /private/tmp/banzena-checker-wheel-final/banzena_inventory_check-0.1.0-py3-none-any.whl
+Exit code: 0
+Output:
+Processing /private/tmp/banzena-checker-wheel-final/banzena_inventory_check-0.1.0-py3-none-any.whl
+Installing collected packages: banzena-inventory-check
+Successfully installed banzena-inventory-check-0.1.0
+
+[Installed module help]
+Start UTC: 2026-09-24T02:10:44Z
+Start Beijing: 2026-09-24T10:10:44+08:00
+End UTC: 2026-09-24T02:10:44Z
+End Beijing: 2026-09-24T10:10:44+08:00
+Command: /private/tmp/banzena-checker-verify-venv-final/bin/python -m banzena_inventory_check --help
+Exit code: 0
+Output:
+usage: __main__.py [-h] --base BASE [--json]
+
+Check Banzena public shop inventory.
+
+options:
+  -h, --help   show this help message and exit
+  --base BASE  Banzena public base URL
+  --json
+
+Wheel artifact: /private/tmp/banzena-checker-wheel-final/banzena_inventory_check-0.1.0-py3-none-any.whl

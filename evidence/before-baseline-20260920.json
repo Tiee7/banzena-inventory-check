@@ -1,0 +1,72 @@
+{
+  "purpose": "Historical before-state evidence for the Banzena demo-store response issue; anonymous public GET only.",
+  "capture_recorded_at_beijing": "2026-09-20T01:49:59+08:00",
+  "capture_record_source": "Original evidence record metadata. Individual response Date headers below provide per-response server timestamps and differ by 31-32 seconds from the recorded bundle time.",
+  "source_record_sha256": "99a3373363d40d913ef9b3f5f46947a4f9f6067eed351c9ae79c54ae20d95acc",
+  "source_pages": {
+    "careers": {
+      "url": "https://www.banzena.com/careers",
+      "status": 200,
+      "advertised_demo_links": [
+        "https://district-threads.banzena.com/",
+        "https://lumen-studio.banzena.com/"
+      ]
+    },
+    "pricing": {
+      "url": "https://www.banzena.com/pricing",
+      "status": 200,
+      "advertised_demo_link": "https://district-threads.banzena.com/"
+    }
+  },
+  "before_targets": [
+    {
+      "name": "district",
+      "url": "https://district-threads.banzena.com/",
+      "http_status": 404,
+      "content_type": "application/json",
+      "body_bytes": 27,
+      "body_sha256": "6180b9b7e10f06b3f2bf9e03f370cb9829762772f9f677350a811c3ba277c41d",
+      "body_preview": "{\"error\":\"Store not found\"}",
+      "http_date_header_utc": "2026-09-19T17:49:27Z",
+      "date_header_time_beijing": "2026-09-20T01:49:27+08:00",
+      "header_source_file": "outreach/evidence/banzena-20260920/demo-shops/district.headers.txt"
+    },
+    {
+      "name": "lumen",
+      "url": "https://lumen-studio.banzena.com/",
+      "http_status": 404,
+      "content_type": "application/json",
+      "body_bytes": 27,
+      "body_sha256": "6180b9b7e10f06b3f2bf9e03f370cb9829762772f9f677350a811c3ba277c41d",
+      "body_preview": "{\"error\":\"Store not found\"}",
+      "http_date_header_utc": "2026-09-19T17:49:28Z",
+      "date_header_time_beijing": "2026-09-20T01:49:28+08:00",
+      "header_source_file": "outreach/evidence/banzena-20260920/demo-shops/lumen.headers.txt"
+    },
+    {
+      "name": "harvest",
+      "url": "https://harvestroot.banzena.com/",
+      "http_status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "body_bytes": 315902,
+      "body_sha256": "f0e66bd8baff089ac8bac120c879ebcfd90d4fef6097c0f16d33b405fef68b84",
+      "body_preview": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Harvest &amp; Root</title>\n<meta name=\"description\" content",
+      "http_date_header_utc": "2026-09-19T17:49:28Z",
+      "date_header_time_beijing": "2026-09-20T01:49:28+08:00",
+      "header_source_file": "outreach/evidence/banzena-20260920/demo-shops/harvest.headers.txt"
+    },
+    {
+      "name": "lduchen",
+      "url": "https://lduchen.banzena.com/",
+      "http_status": 200,
+      "content_type": "text/html; charset=UTF-8",
+      "body_bytes": 323680,
+      "body_sha256": "c0b342f3f936bfa025d2ef0f02ad8829f6336b123b9d731341a0a5dfa7d45994",
+      "body_preview": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>L'Duchen Maison</title>\n<meta name=\"description\" content=\"H",
+      "http_date_header_utc": "2026-09-19T17:49:27Z",
+      "date_header_time_beijing": "2026-09-20T01:49:27+08:00",
+      "header_source_file": "outreach/evidence/banzena-20260920/demo-shops/lduchen.headers.txt"
+    }
+  ],
+  "timestamp_note": "HTTP Date headers are server response timestamps in UTC, converted to Beijing time (UTC+8) for readability. The bundle recorded_at value is a separate observation-record timestamp. Neither has been substituted for the other."
+}

@@ -1,0 +1,219 @@
+{
+  "base": "https://www.banzena.com",
+  "errors": [],
+  "exit_code": 0,
+  "hosts": [
+    {
+      "advertised_by": [
+        "https://www.banzena.com",
+        "https://www.banzena.com/pricing",
+        "https://www.banzena.com/careers"
+      ],
+      "body_sha256": "d427f06b54825bccdbb340753e4c564d28634c6f91f5be2ab917755013cd2aae",
+      "content_type": "text/html; charset=UTF-8",
+      "expected": "advertised",
+      "fetched_at": "2026-09-24T02:09:49Z",
+      "first_bytes": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>District Threads</title>\n<meta name=\"description\" content=\"",
+      "hostname": "district-threads.banzena.com",
+      "status": "pass",
+      "status_code": 200
+    },
+    {
+      "advertised_by": [
+        "https://www.banzena.com",
+        "https://www.banzena.com/pricing"
+      ],
+      "body_sha256": "46d7e28918b368b51a27b00b38f946c19c202515054c4572abbeea15d4a59f5f",
+      "content_type": "text/html; charset=UTF-8",
+      "expected": "advertised",
+      "fetched_at": "2026-09-24T02:09:51Z",
+      "first_bytes": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Ember &amp; Hearth</title>\n<meta name=\"description\" content",
+      "hostname": "ember-hearth.banzena.com",
+      "status": "pass",
+      "status_code": 200
+    },
+    {
+      "advertised_by": [
+        "https://www.banzena.com/pricing"
+      ],
+      "body_sha256": "7044d8d9d2347e14a04714b9f96eeebe31d5e015ad59396f30a0d5378b29d9a9",
+      "content_type": "text/html; charset=UTF-8",
+      "expected": "advertised",
+      "fetched_at": "2026-09-24T02:09:53Z",
+      "first_bytes": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Harvest &amp; Root</title>\n<meta name=\"description\" content",
+      "hostname": "harvestroot.banzena.com",
+      "status": "pass",
+      "status_code": 200
+    },
+    {
+      "advertised_by": [
+        "https://www.banzena.com/pricing"
+      ],
+      "body_sha256": "fda513b19b11c48bcc3a184e0cd7ddabb2c198c6f11595589c51947d20ba4d3c",
+      "content_type": "text/html; charset=UTF-8",
+      "expected": "known_good",
+      "fetched_at": "2026-09-24T02:09:55Z",
+      "first_bytes": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>L'Duchen Maison</title>\n<meta name=\"description\" content=\"H",
+      "hostname": "lduchen.banzena.com",
+      "status": "pass",
+      "status_code": 200
+    },
+    {
+      "advertised_by": [
+        "https://www.banzena.com/careers"
+      ],
+      "body_sha256": "fffcaf50873e0fe31b5ae1a3f2164b35dd0e411a27fd980ec369df31fe380600",
+      "content_type": "text/html; charset=UTF-8",
+      "expected": "advertised",
+      "fetched_at": "2026-09-24T02:09:57Z",
+      "first_bytes": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Lumen Yoga Studio</title>\n<meta name=\"description\" content=",
+      "hostname": "lumen-studio.banzena.com",
+      "status": "pass",
+      "status_code": 200
+    },
+    {
+      "advertised_by": [
+        "https://www.banzena.com",
+        "https://www.banzena.com/pricing",
+        "https://www.banzena.com/about"
+      ],
+      "body_sha256": "77c581f830de0330bc440d645e6f390a69f87b2f66c10c56dec6d017e6064576",
+      "content_type": "text/html; charset=UTF-8",
+      "expected": "advertised",
+      "fetched_at": "2026-09-24T02:09:59Z",
+      "first_bytes": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>North Ridge Roasters</title>\n<meta name=\"description\" conte",
+      "hostname": "north-ridge-roasters.banzena.com",
+      "status": "pass",
+      "status_code": 200
+    },
+    {
+      "advertised_by": [
+        "https://www.banzena.com",
+        "https://www.banzena.com/about"
+      ],
+      "body_sha256": "9e64b3cdb3a7a0e5671e2f51110d768fe4223689ad5256940205f87d6e3ca8e0",
+      "content_type": "text/html; charset=UTF-8",
+      "expected": "advertised",
+      "fetched_at": "2026-09-24T02:10:01Z",
+      "first_bytes": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Pixel &amp; Press</title>\n<meta name=\"description\" content=",
+      "hostname": "pixel-and-press.banzena.com",
+      "status": "pass",
+      "status_code": 200
+    },
+    {
+      "advertised_by": [
+        "https://www.banzena.com",
+        "https://www.banzena.com/pricing",
+        "https://www.banzena.com/about"
+      ],
+      "body_sha256": "81df05dcc2f0df7c8caceaa9f4904c54690818eed76d15a0f558907dd9c26961",
+      "content_type": "text/html; charset=UTF-8",
+      "expected": "advertised",
+      "fetched_at": "2026-09-24T02:10:04Z",
+      "first_bytes": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Soft Skin Society</title>\n<meta name=\"description\" content=",
+      "hostname": "soft-skin-society.banzena.com",
+      "status": "pass",
+      "status_code": 200
+    },
+    {
+      "advertised_by": [],
+      "body_sha256": "6180b9b7e10f06b3f2bf9e03f370cb9829762772f9f677350a811c3ba277c41d",
+      "content_type": "application/json",
+      "expected": "unknown",
+      "fetched_at": "2026-09-24T02:10:05Z",
+      "first_bytes": "{\"error\":\"Store not found\"}",
+      "hostname": "not-a-shop-xyz.banzena.com",
+      "status": "pass",
+      "status_code": 404
+    }
+  ],
+  "inventory": [
+    "https://banzena.com/examples/carat",
+    "https://banzena.com/examples/crate",
+    "https://banzena.com/examples/dew",
+    "https://banzena.com/examples/stamp",
+    "https://banzena.com/examples/tempo",
+    "https://district-threads.banzena.com/",
+    "https://ember-hearth.banzena.com/",
+    "https://harvestroot.banzena.com/",
+    "https://lduchen.banzena.com/",
+    "https://lumen-studio.banzena.com/",
+    "https://north-ridge-roasters.banzena.com/",
+    "https://pixel-and-press.banzena.com/",
+    "https://soft-skin-society.banzena.com/"
+  ],
+  "pages": [
+    "https://www.banzena.com",
+    "https://www.banzena.com/pricing",
+    "https://www.banzena.com/careers",
+    "https://www.banzena.com/about"
+  ],
+  "paths": [
+    {
+      "advertised_by": [
+        "https://www.banzena.com"
+      ],
+      "body_sha256": "d628aa54cc818cafae27a25ca701d3dfac4017838372c4157ccbc3dcea9e0c4b",
+      "content_type": "text/html; charset=UTF-8",
+      "expected": "advertised_path",
+      "fetched_at": "2026-09-24T02:09:35Z",
+      "first_bytes": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Lumi\u00e8re Fine Jewelry</title>\n<meta name=\"description\" cont",
+      "status": "pass",
+      "status_code": 200,
+      "url": "https://banzena.com/examples/carat"
+    },
+    {
+      "advertised_by": [
+        "https://www.banzena.com"
+      ],
+      "body_sha256": "77bca99341c6b4673c04bb9ab340975e2ec52d58df0d52a430e663f71ea526ea",
+      "content_type": "text/html; charset=UTF-8",
+      "expected": "advertised_path",
+      "fetched_at": "2026-09-24T02:09:38Z",
+      "first_bytes": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Orchard Lane Produce</title>\n<meta name=\"description\" conte",
+      "status": "pass",
+      "status_code": 200,
+      "url": "https://banzena.com/examples/crate"
+    },
+    {
+      "advertised_by": [
+        "https://www.banzena.com"
+      ],
+      "body_sha256": "d20e22a1c68e416833fa3cabd24d3f9501a1bc01bb12bb0e549a6294b0264a8d",
+      "content_type": "text/html; charset=UTF-8",
+      "expected": "advertised_path",
+      "fetched_at": "2026-09-24T02:09:41Z",
+      "first_bytes": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Dew Skin Studio</title>\n<meta name=\"description\" content=\"S",
+      "status": "pass",
+      "status_code": 200,
+      "url": "https://banzena.com/examples/dew"
+    },
+    {
+      "advertised_by": [
+        "https://www.banzena.com"
+      ],
+      "body_sha256": "1cb9ee0b680ee812a296cae361849868efb7e0e6f48c9ad8ccbe78040047b264",
+      "content_type": "text/html; charset=UTF-8",
+      "expected": "advertised_path",
+      "fetched_at": "2026-09-24T02:09:43Z",
+      "first_bytes": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Inkwell Custom</title>\n<meta name=\"description\" content=\"Cu",
+      "status": "pass",
+      "status_code": 200,
+      "url": "https://banzena.com/examples/stamp"
+    },
+    {
+      "advertised_by": [
+        "https://www.banzena.com"
+      ],
+      "body_sha256": "4a277d3a39dfc0075e5c458b8e3672718d785fe71baebd20ff3cc88984862803",
+      "content_type": "text/html; charset=UTF-8",
+      "expected": "advertised_path",
+      "fetched_at": "2026-09-24T02:09:47Z",
+      "first_bytes": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Foundry Strength</title>\n<meta name=\"description\" content=\"",
+      "status": "pass",
+      "status_code": 200,
+      "url": "https://banzena.com/examples/tempo"
+    }
+  ],
+  "status": "pass"
+}
